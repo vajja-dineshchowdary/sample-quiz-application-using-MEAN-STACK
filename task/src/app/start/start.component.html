@@ -1,0 +1,50 @@
+<div class="grid-container">
+  <mat-grid-list cols="1" rowHeight="350px">
+    <div @enterheading class="welcome">Welcome to
+    <span class="logo"></span></div>
+    <mat-grid-tile @enter *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <!-- <div>Card Content Here</div> -->
+          <div class="task-container">
+            <form class='task-form' [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+              <mat-form-field>
+                <input id="name" matInput placeholder="Enter your name" class='' formControlName="name" autocomplete="off" required>
+                <!-- <input id="name" class="form-control" formControlName="name" required> -->
+                   <mat-error *ngIf="name.hasError('name') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="name.hasError('required')">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="name.hasError('minlength')">
+                      Minimum 3 letters <strong>required</strong>
+                    </mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select id="test" placeholder="Choose test" class='' formControlName="test" required>
+                  <mat-option value="html">Html</mat-option>
+                  <mat-option value="css">CSS</mat-option>
+                  <mat-option value="javascript">Javascript</mat-option>
+                  <mat-option value="php">PHP</mat-option>
+                </mat-select>
+                <mat-error *ngIf="test.hasError('required')">
+                    Choose the test
+                  </mat-error>
+              </mat-form-field>
+              <div class="example-button-row">
+                <button mat-raised-button color="primary">Start</button>
+              </div>
+            </form>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

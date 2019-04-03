@@ -1,0 +1,118 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #77bfa1;
+  height: 100%;
+}
+
+.test-card {
+  width: 500px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+
+.example-margin {
+  width: 70%;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.question-list {
+  width: 70%;
+  height: auto;
+  align-items: center;
+}
+
+.question-container {
+  width: 100%;
+
+  .question-card {
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: #6eb195 !important;
+
+    mat-card-content {
+      padding: 1em 1em 28px;
+      text-align: center;
+      font-size: 18px;
+      max-height: 100%;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      word-break: break-word;
+    }
+  }
+
+}
+
+.question-container::after {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  left: 60%;
+  border: solid transparent;
+  pointer-events: none;
+  border-color: transparent;
+  border-left-color: #6eb195;
+  border-width: .85em;
+  margin-top: -30px;
+  -webkit-transform-origin: 0 70%;
+  -ms-transform-origin: 0 70%;
+  transform-origin: 0 70%;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  z-index: 12;
+}
+
+
+.mat-raised-button {
+  min-width: 100px;
+  height: 45px;
+}
+
+.answer {
+  width: 33.3333333%;
+  padding: 0 .625em 1.25em;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  counter-increment: answer;
+  position: relative;
+}
+
+.answer-container {
+  margin-top: 40px;
+  div {
+    margin-bottom: 20px;
+    mat-card {
+      border-radius: 6px;
+      cursor: pointer;
+      padding:0;
+      mat-card-content {
+        padding: 16px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.mat-card:hover {
+  background-color: #efefef;
+}
+.mat-card-content.active {
+  background-color: #fffe96;
+}
+/// from site
+

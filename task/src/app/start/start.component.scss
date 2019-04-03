@@ -1,0 +1,64 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px;
+  margin:0;
+  background-color: #77bfa1;
+}
+.welcome {
+  font-size: 28px;
+  display: flex;
+  padding-left: 34px;
+  justify-content: center;
+  .logo {
+      width: 200px;
+      height: 100px;
+      background: url(../../assets/logo.png) no-repeat left center;
+      background-size: contain;
+      margin-top: -32px;
+      margin-left: 5px;
+  }
+}
+.mat-grid-list {
+  width: 100%;
+}
+
+.dashboard-card {
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-container > * {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}

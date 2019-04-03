@@ -1,0 +1,27 @@
+<div class="grid-container">
+  <div class="question-list">
+    <div @enterheading class="question-container">
+      <div class="question-card">
+        <mat-card-content class="question">
+          {{q_a.Question}}
+        </mat-card-content>
+      </div>
+    </div>
+    <div @enteranswer class="answer-container row">
+      <div class="col-md-6" *ngFor="let ans of q_a.ChooseAnswer  | mapToIterable ">
+        <mat-card (click)="onSelectAnswer(ans.val, $event)">
+          <mat-card-content>
+            {{ans.val}}
+          </mat-card-content>
+         </mat-card>
+      </div>
+    </div>
+
+      <section @enter class="example-section">
+      <mat-progress-bar class="example-margin" color="#ed4642c9" [mode]="mode" [value]="value">
+      </mat-progress-bar>
+    </section>
+    <button @enter flex="33" [disabled]="selected" mat-raised-button color="primary" (click)="next()">{{btnVal}}</button>
+  </div>
+</div>
+
