@@ -8,9 +8,6 @@
     "start": "nodemon --exec babel-node index.js",
     "dropdb": "node ./data/load-sample-data.js --delete",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },"repository": {
-    "type": "git",
-    "url": "https://github.com/vajja-dineshchowdary/sample-quiz-application-using-MEAN-STACK.git"
   },
   "keywords": [
     "Using",
